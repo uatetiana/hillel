@@ -10,10 +10,10 @@ alert('Arithmetic mean: ' + arithmeticMean);
 
 //Task 2
 
-let temperatureInFahrenheit = prompt('Please enter temperature in Fahrenheit: ');
-let temperatureInCelsius = (parseInt(temperatureInFahrenheit) - 32) * 5/9;
+let temperatureInCelsius= prompt('Please enter temperature in : ');
+let temperatureInFahrenheit = parseInt(temperatureInCelsius) * 9/5 + 32;
 
-alert('Temperature in Celsius: ' + temperatureInCelsius);
+alert('Temperature in Fahrenheit: ' + temperatureInFahrenheit);
 
 //Task 3
 
