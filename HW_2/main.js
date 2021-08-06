@@ -43,7 +43,12 @@ let heightOfDoor = parseInt(prompt('Enter height of the door, meters: '));
 let widthOfDoor = parseInt(prompt('Enter width of the door, meters: '));
 
 let rollSqM = LENGTH_OF_ROLL * WIDTH_OF_ROLL;
-let qtyOfRolls = ((( heightOfCeiling * lengthOfRoom  * 2 + heightOfCeiling * widthOfRoom * 2) - qtyOfWindow * heightOfWindow * widthOfWindow - heightOfDoor * widthOfDoor) / rollSqM).toFixed(0);
+
+let roomSquareMetersGross = heightOfCeiling * lengthOfRoom  * 2 + heightOfCeiling * widthOfRoom * 2;
+let windowSquareMeters = qtyOfWindow * heightOfWindow * widthOfWindow;
+let doorSquareMeters = heightOfDoor * widthOfDoor;
+
+let qtyOfRolls = ((roomSquareMetersGross - windowSquareMeters - doorSquareMeters) / rollSqM).toFixed(0);
 
 alert(`Quantity of rolls: ${qtyOfRolls}`);
 
@@ -257,33 +262,29 @@ const isLeapYear = yearToBeChecked % 4 === 0
 && yearToBeChecked % 100 !== 0 || yearToBeChecked % 400 === 0;
 
 switch (monthToBeChecked) {
-    case 1: maxDaysInMonth = 31;
+  case 1:
+  case 3:
+  case 5:
+  case 7:
+  case 8:
+  case 10: 
+  case 12: 
+    maxDaysInMonth = 31;
     break;
-    case 2: if (isLeapYear && monthToBeChecked === 2) {
-                maxDaysInMonth = 29;
-            } else {
-                maxDaysInMonth = 28;
-            }
+  case 2: if (isLeapYear && monthToBeChecked === 2) {
+              maxDaysInMonth = 29;
+          } else {
+              maxDaysInMonth = 28;
+          }
     break;
-    case 4: maxDaysInMonth = 30;
-    break;
-    case 5: maxDaysInMonth = 31;
-    break;
-    case 6: maxDaysInMonth = 30;
-    break;
-    case 7: maxDaysInMonth = 31;
-    break;
-    case 8: maxDaysInMonth = 31;
-    break;
-    case 9: maxDaysInMonth = 30;
-    break;
-    case 10: maxDaysInMonth = 31;
-    break;
-    case 11: maxDaysInMonth = 30;
-    break;
-    case 12: maxDaysInMonth = 31;
-    break;
-    default: maxDaysInMonth = false;
+  case 4: 
+  case 6: 
+  case 9: 
+  case 11: 
+     maxDaysInMonth = 30;
+     break;
+  default: 
+     maxDaysInMonth = false;
 }
 
 if (maxDaysInMonth) {
