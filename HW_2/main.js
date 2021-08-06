@@ -45,7 +45,8 @@ let heightOfDoor = parseInt(prompt('Enter height of the door, meters: '));
 let widthOfDoor = parseInt(prompt('Enter width of the door, meters: '));
 
 let rollSqM = LENGTH_OF_ROLL * WIDTH_OF_ROLL;
-let qtyOfRolls = ((( heightOfCeiling * lengthOfRoom  * 2 + heightOfCeiling * widthOfRoom * 2) - qtyOfWindow * heightOfWindow * widthOfWindow - heightOfDoor * widthOfDoor) / rollSqM).toFixed(0);
+let qtyOfRolls = ((( heightOfCeiling * lengthOfRoom  * 2 + heightOfCeiling * widthOfRoom * 2) - qtyOfWindow 
+* heightOfWindow * widthOfWindow - heightOfDoor * widthOfDoor) / rollSqM).toFixed(0);
 
 alert(`Quantity of rolls ${qtyOfRolls}, units`);
 
