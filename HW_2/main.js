@@ -356,3 +356,57 @@ if (a !== 0) {
 } else {
   alert("Это не квадратное уравнение.");
 }
+
+// Задача 8. Жалюзи
+
+// Написать программу, которая позволяет посчитать цену жалюзи. 
+// Исходные данные: размер (ширина и высота, выраженные в сантиметрах) 
+// и тип материала (пластик, текстиль, алюминий).
+// Цена жалюзи в зависимости от материала:
+// 1. Пластик 200 грн/кв.м
+// 2. Текстиль 250 грн/кв.м
+// 3. Алюминий 350 грн/кв.м
+
+// Ниже приведен рекомендуемый вид диалога с пользователем.
+// -----------------------------------------------------------------
+// Ширина (см) –> 75
+// Высота (см) –> 150
+
+// Материал:
+// 1 – Пластик
+// 2 – Текстиль
+// 3 – Алюминий
+// Ваш выбор –> 3
+
+// -----------------------------
+// Цена за кв. м: 350.00 грн.
+// Площадь: 1.13 кв. м.
+// К оплате: 393.75 грн.
+// -----------------------------------------------------------------
+
+
+const COST_PER_METER_PLASTIC = 200;
+const COST_PER_METER_TEXTILES = 250;
+const COST_PER_METER_ALUMINIUM = 350;
+
+const widthOfBlinds = parseInt(prompt('Enter width of blinds in cm: '));
+const heightOfBlinds = parseInt(prompt('Enter height of blinds in cm: '));
+const materialToBeCalculated = parseInt(prompt('Enter type of material: 1 - plastic; 2 - textiles; 3 - aluminium'));
+
+const squareMetersOfBlinds = widthOfBlinds / 100 * heightOfBlinds / 100;
+let priceOfBlindsSelected;
+
+switch (materialToBeCalculated) {
+    case 1: priceOfBlindsSelected = COST_PER_METER_PLASTIC;
+    break;
+    case 2: priceOfBlindsSelected = COST_PER_METER_TEXTILES;
+    break;
+    case 3: priceOfBlindsSelected = COST_PER_METER_ALUMINIUM;
+    break;
+    default: priceOfBlindsSelected = false;
+}
+
+alert(`You have chosen type ${materialToBeCalculated}
+price per sq.m = ${priceOfBlindsSelected} uah
+total square meters = ${squareMetersOfBlinds.toFixed(2)}
+Total to be paid: ${(priceOfBlindsSelected * squareMetersOfBlinds).toFixed(2)} uah`);
