@@ -237,64 +237,65 @@ alert(`Maximum number is ${max}`);
 // является особым високосным годом, который бывает лишь раз в 400 лет.
 
 
-let dayToBeChecked = parseInt(prompt('Enter the day of the date - dd: '));
-let monthToBeChecked =  parseInt(prompt('Enter the month of the date - mm: '));
-let yearToBeChecked =  parseInt(prompt('Enter the year of the date - yyyy: '));
-let maxDaysInMonth;
+// let dayToBeChecked = parseInt(prompt('Enter the day of the date - dd: '));
+// let monthToBeChecked =  parseInt(prompt('Enter the month of the date - mm: '));
+// let yearToBeChecked =  parseInt(prompt('Enter the year of the date - yyyy: '));
+// let maxDaysInMonth;
 
-let isCorrectMonth = false;
-let isCorrectYear = false;
-let isCorrectDay = false;
+// let isCorrectMonth = false;
+// let isCorrectYear = false;
+// let isCorrectDay = false;
 
-if (monthToBeChecked > 0 && monthToBeChecked < 13) {
-    isCorrectMonth = true;
-}
+// if (monthToBeChecked > 0 && monthToBeChecked < 13) {
+//     isCorrectMonth = true;
+// }
 
-if (yearToBeChecked > 0) {
-    isCorrectYear = true;
-}
+// if (yearToBeChecked > 0) {
+//     isCorrectYear = true;
+// }
 
-const isLeapYear = yearToBeChecked % 4 === 0 && yearToBeChecked % 100 !== 0 || yearToBeChecked % 400 === 0;
+// const isLeapYear = yearToBeChecked % 4 === 0 && yearToBeChecked % 100 !== 0 || yearToBeChecked % 400 === 0;
 
-switch (monthToBeChecked) {
-    case 1: maxDaysInMonth = 31;
-    break;
-    case 2: if (isLeapYear && monthToBeChecked === 2) {
-                maxDaysInMonth = 29;
-            } else {
-                maxDaysInMonth = 28;
-            }
-    break;
-    case 4: maxDaysInMonth = 30;
-    break;
-    case 5: maxDaysInMonth = 31;
-    break;
-    case 6: maxDaysInMonth = 30;
-    break;
-    case 7: maxDaysInMonth = 31;
-    break;
-    case 8: maxDaysInMonth = 31;
-    break;
-    case 9: maxDaysInMonth = 30;
-    break;
-    case 10: maxDaysInMonth = 31;
-    break;
-    case 11: maxDaysInMonth = 30;
-    break;
-    case 12: maxDaysInMonth = 31;
-    break;
-    default: maxDaysInMonth = false;
-}
+// switch (monthToBeChecked) {
+//     case 1: maxDaysInMonth = 31;
+//     break;
+//     case 2: if (isLeapYear && monthToBeChecked === 2) {
+//                 maxDaysInMonth = 29;
+//             } else {
+//                 maxDaysInMonth = 28;
+//             }
+//     break;
+//     case 4: maxDaysInMonth = 30;
+//     break;
+//     case 5: maxDaysInMonth = 31;
+//     break;
+//     case 6: maxDaysInMonth = 30;
+//     break;
+//     case 7: maxDaysInMonth = 31;
+//     break;
+//     case 8: maxDaysInMonth = 31;
+//     break;
+//     case 9: maxDaysInMonth = 30;
+//     break;
+//     case 10: maxDaysInMonth = 31;
+//     break;
+//     case 11: maxDaysInMonth = 30;
+//     break;
+//     case 12: maxDaysInMonth = 31;
+//     break;
+//     default: maxDaysInMonth = false;
+// }
 
-if (maxDaysInMonth) {
-    if (dayToBeChecked <= maxDaysInMonth && dayToBeChecked > 0) {
-        isCorrectDay = true;
-    }
-}
+// if (maxDaysInMonth) {
+//     if (dayToBeChecked <= maxDaysInMonth && dayToBeChecked > 0) {
+//         isCorrectDay = true;
+//     }
+// }
 
-let isCorrectDate = isCorrectDay && isCorrectMonth && isCorrectYear;
+// let isCorrectDate = isCorrectDay && isCorrectMonth && isCorrectYear;
 
-alert(`The date dd/mm/yyyy ${dayToBeChecked}/${monthToBeChecked}/${yearToBeChecked} is ${isCorrectDate ? 'correct' : 'incorrect'}`);
+// alert(`The date dd/mm/yyyy ${dayToBeChecked}/${monthToBeChecked}/${yearToBeChecked}
+//  is ${isCorrectDate ? 'correct' : 'incorrect'}`);
 
 
 // Задача 6. Линейное уравнение
@@ -304,7 +305,15 @@ alert(`The date dd/mm/yyyy ${dayToBeChecked}/${monthToBeChecked}/${yearToBeCheck
 // Пользователь вводит значение коэффициентов a и b,
 // выводит решение, учесть ситуации a=0 и b=0.
 
+let a1 = parseFloat(prompt('Введите значение а: '));
+let b1 = parseFloat(prompt('Введите значение b: '));
 
+if (a != 0) {
+    alert(`x = ${}`);
+
+} else {
+    alert('Это не линейное уравнение.');
+}
 
 
 // Задача 7. Квадратное уравнение
@@ -314,20 +323,24 @@ alert(`The date dd/mm/yyyy ${dayToBeChecked}/${monthToBeChecked}/${yearToBeCheck
 // по формуле дискриминанта (http://edu.glavsprav.ru/info/diskriminant/). Написать программу, 
 // которая решает квадратные уравнения по введенным пользователем коэффициентам.
 
-let a = parseFloat('Введите значение а: ');
-let b = parseFloat('Введите значение b: ');
-let c = parseFloat('Введите значение c: ');
+let a = parseFloat(prompt('Введите значение а: '));
+let b = parseFloat(prompt('Введите значение b: '));
+let c = parseFloat(prompt('Введите значение c: '));
 
 	if (a !== 0) {
         let D = b * b - 4 * a * c;
         
 		if (D > 0) {
-			alert(`x1 = " ${(-b + Math.sqrt(D)) / (2 * a)}  x2 = " ${(-b - Math.sqrt(D)) / (2 * a)}`);
+			alert(`x1 = "${(-b + Math.sqrt(D)) / (2 * a)}";  x2 = "${(-b - Math.sqrt(D)) / (2 * a)}"`);
 		}
 		else {
 			if (D === 0) {
 				alert(`x =  ${-b / (2 * a)}`);
-			}
+            }
+            
+            if (D < 0) {
+                alert('Не имеет действительных решений, так как D меньше 0')
+            }
 		}
 	}
 	else {
