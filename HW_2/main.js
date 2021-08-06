@@ -12,9 +12,7 @@ let seconds = parseInt(prompt('Please enter seconds to convert into minutes: '))
 let hours = Math.trunc(seconds /  SECONDS_IN_HOUR);
 let minutes = Math.trunc(( seconds % SECONDS_IN_HOUR ) / SECONDS_IN_MINUTE);
 
-alert(`${seconds} seconds are ${hours}
-${hours < 2 && hours > 0 ? 'hour' : 'hours'}
- and ${minutes} ${minutes < 2 && minutes > 0 ? 'minute' :  'minutes'}`);
+alert(`${seconds} seconds are ${hours} ${hours < 2 && hours > 0 ? 'hour' : 'hours'} and ${minutes} ${minutes < 2 && minutes > 0 ? 'minute' :  'minutes'}`);
 
 // Задача 2. Поклейка комнаты
 
@@ -45,10 +43,9 @@ let heightOfDoor = parseInt(prompt('Enter height of the door, meters: '));
 let widthOfDoor = parseInt(prompt('Enter width of the door, meters: '));
 
 let rollSqM = LENGTH_OF_ROLL * WIDTH_OF_ROLL;
-let qtyOfRolls = ((( heightOfCeiling * lengthOfRoom  * 2 + heightOfCeiling * widthOfRoom * 2) - qtyOfWindow 
-* heightOfWindow * widthOfWindow - heightOfDoor * widthOfDoor) / rollSqM).toFixed(0);
+let qtyOfRolls = ((( heightOfCeiling * lengthOfRoom  * 2 + heightOfCeiling * widthOfRoom * 2) - qtyOfWindow * heightOfWindow * widthOfWindow - heightOfDoor * widthOfDoor) / rollSqM).toFixed(0);
 
-alert(`Quantity of rolls ${qtyOfRolls}, units`);
+alert(`Quantity of rolls: ${qtyOfRolls}`);
 
 // Задача 3. Максимальное из введенных чисел
 
@@ -234,8 +231,9 @@ alert(`Your total score is ${count * scoreForOneQuestion}`);
 
 // Написать приложение, которое позволяет проверить дату введенную пользователем.
 // Учесть, что в году 12 месяцев, в январе - 31 день, в феврале 28 дней для не високосного
-//  года и 29 дней для високосного года и т.д.
-// Год високосный, если он делится на четыре без остатка, но если он делится на 100 без остатка, это не високосный год. Однако, если он делится без остатка на 400, это високосный год. Таким образом, 2000 г.
+// года и 29 дней для високосного года и т.д.
+// Год високосный, если он делится на четыре без остатка, но если он делится на 100 без остатка, это не високосный год. 
+// Однако, если он делится без остатка на 400, это високосный год. Таким образом, 2000 г.
 // является особым високосным годом, который бывает лишь раз в 400 лет.
 
 let dayToBeChecked = parseInt(prompt('Enter the day of the date - dd: '));
@@ -296,8 +294,7 @@ if (maxDaysInMonth) {
 
 let isCorrectDate = isCorrectDay && isCorrectMonth && isCorrectYear;
 
-alert(`The date dd/mm/yyyy ${dayToBeChecked}/${monthToBeChecked}/${yearToBeChecked}
- is ${isCorrectDate ? 'correct' : 'incorrect'}`);
+alert(`The date dd/mm/yyyy ${dayToBeChecked}/${monthToBeChecked}/${yearToBeChecked} is ${isCorrectDate ? 'correct' : 'incorrect'}`);
 
 // Задача 6. Линейное уравнение
 
