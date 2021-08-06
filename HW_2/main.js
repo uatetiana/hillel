@@ -99,133 +99,133 @@ alert(`Maximum number is ${max}`);
 // 4 - неизвестно
 // введите номер ответа:
 
-confirm('Please choose one correct answer, there will be 10 questions.');
+// confirm('Please choose one correct answer, there will be 10 questions.');
 
-let count = 0;
-const scoreForOneQuestion = parseFloat(1.2.toFixed(1));
-console.log(scoreForOneQuestion)
+// let count = 0;
+// const scoreForOneQuestion = parseFloat(1.2.toFixed(1));
+// console.log(scoreForOneQuestion)
 
-let test1 = parseInt(prompt(`I'm sorry, 
-he just __________________________ ( = left the office). 
-He'll be back in half an hour.
+// let test1 = parseInt(prompt(`I'm sorry, 
+// he just __________________________ ( = left the office). 
+// He'll be back in half an hour.
 
-1. stormed out
-2. walked
-3. stepped out
-`));
+// 1. stormed out
+// 2. walked
+// 3. stepped out
+// `));
 
-if (test1 === 3) {
-    count++;
-} 
+// if (test1 === 3) {
+//     count++;
+// } 
 
-let test2 = parseInt(prompt(`Please let me know ________________.
+// let test2 = parseInt(prompt(`Please let me know ________________.
 
-1. through email
-2. by email
-3. with email
-`));
+// 1. through email
+// 2. by email
+// 3. with email
+// `));
 
-if (test2 === 2) {
-    count++;
-} 
+// if (test2 === 2) {
+//     count++;
+// } 
 
-let test3 = parseInt(prompt(`The amount of work that 
-you have to do is called your __________________________.
+// let test3 = parseInt(prompt(`The amount of work that 
+// you have to do is called your __________________________.
 
-1. workload
-2. job load
-3. work-heap
-`));
+// 1. workload
+// 2. job load
+// 3. work-heap
+// `));
 
-if (test3 === 1) {
-    count++;
-}
+// if (test3 === 1) {
+//     count++;
+// }
 
-let test4 = parseInt(prompt(`I remember faces very well. = I'm
+// let test4 = parseInt(prompt(`I remember faces very well. = I'm
 
-1. good at faces
-2. good with faces
-3. good in faces
-`));
+// 1. good at faces
+// 2. good with faces
+// 3. good in faces
+// `));
 
-if (test4 === 2) {
-    count++;
-}
+// if (test4 === 2) {
+//     count++;
+// }
 
-let test5 = parseInt(prompt(`He is the head of the accounting department. = 
-He's __________________________ of the accounting department.
+// let test5 = parseInt(prompt(`He is the head of the accounting department. = 
+// He's __________________________ of the accounting department.
 
-1. in charge
-2. charge
-3. in control
-`));
+// 1. in charge
+// 2. charge
+// 3. in control
+// `));
 
-if (test5 === 1) {
-    count++;
-}
+// if (test5 === 1) {
+//     count++;
+// }
 
-let test6 = parseInt(prompt(`He has been programming for 15 years,
- and sometimes uses terms that are no longer __________________ in programming.
- ( = slightly outdated terms)
+// let test6 = parseInt(prompt(`He has been programming for 15 years,
+//  and sometimes uses terms that are no longer __________________ in programming.
+//  ( = slightly outdated terms)
 
-1. overused
-2. used up
-3. widely used
-`));
+// 1. overused
+// 2. used up
+// 3. widely used
+// `));
 
-if (test6 === 3) {
-    count++;
-}
+// if (test6 === 3) {
+//     count++;
+// }
 
-let test7 = parseInt(prompt(`This function __________________ 
-( = produces) the wrong value.
+// let test7 = parseInt(prompt(`This function __________________ 
+// ( = produces) the wrong value.
 
-1. returns
-2. reveals
-3. replays
-`));
+// 1. returns
+// 2. reveals
+// 3. replays
+// `));
 
-if (test7 === 1) {
-    count++;
-}
+// if (test7 === 1) {
+//     count++;
+// }
 
-let test8 = parseInt(prompt(`Do a search to find every __________________ of this variable.
- ( = a list of every time the variable appears in the code).
+// let test8 = parseInt(prompt(`Do a search to find every __________________ of this variable.
+//  ( = a list of every time the variable appears in the code).
 
-1. instant
-2. constant
-3. instance
-`));
+// 1. instant
+// 2. constant
+// 3. instance
+// `));
 
-if (test8 === 3) {
-    count++;
-}
+// if (test8 === 3) {
+//     count++;
+// }
 
-let test9 = parseInt(prompt(`Other parts of the program 
-will be able to __________________ 
-these objects using simple function calls.
+// let test9 = parseInt(prompt(`Other parts of the program 
+// will be able to __________________ 
+// these objects using simple function calls.
 
-1. work
-2. work with
-3. work at
-`));
+// 1. work
+// 2. work with
+// 3. work at
+// `));
 
-if (test9 === 2) {
-    count++;
-}
+// if (test9 === 2) {
+//     count++;
+// }
 
-let test10 = parseInt(prompt(`I'm not sure I can keep ______ this.
+// let test10 = parseInt(prompt(`I'm not sure I can keep ______ this.
 
-1. doing
-2. to do 
-3. do
-`));
+// 1. doing
+// 2. to do 
+// 3. do
+// `));
 
-if (test10 === 1) {
-    count++;
-}
+// if (test10 === 1) {
+//     count++;
+// }
 
-alert(`Your total score is ${count * scoreForOneQuestion}`);
+// alert(`Your total score is ${count * scoreForOneQuestion}`);
 
 
 // Задача 5. Проверка даты
@@ -235,3 +235,79 @@ alert(`Your total score is ${count * scoreForOneQuestion}`);
 //  года и 29 дней для високосного года и т.д.
 // Год високосный, если он делится на четыре без остатка, но если он делится на 100 без остатка, это не високосный год. Однако, если он делится без остатка на 400, это високосный год. Таким образом, 2000 г. 
 // является особым високосным годом, который бывает лишь раз в 400 лет.
+
+
+let dayToBeChecked = parseInt(prompt('Enter the day of the date - dd: '));
+let monthToBeChecked =  parseInt(prompt('Enter the month of the date - mm: '));
+let yearToBeChecked =  parseInt(prompt('Enter the year of the date - yyyy: '));
+let maxDaysInMonth;
+
+let isCorrectMonth = false;
+let isCorrectYear = false;
+let isCorrectDay = false;
+
+if (monthToBeChecked > 0 && monthToBeChecked < 13) {
+    isCorrectMonth = true;
+}
+
+if (yearToBeChecked > 0) {
+    isCorrectYear = true;
+}
+
+const isLeapYear = yearToBeChecked % 4 === 0 && yearToBeChecked % 100 !== 0 || yearToBeChecked % 400 === 0;
+
+switch (monthToBeChecked) {
+    case 1: maxDaysInMonth = 31;
+    break;
+    case 2: if (isLeapYear && monthToBeChecked === 2) {
+                maxDaysInMonth = 29;
+            } else {
+                maxDaysInMonth = 28;
+            }
+    break;
+    case 4: maxDaysInMonth = 30;
+    break;
+    case 5: maxDaysInMonth = 31;
+    break;
+    case 6: maxDaysInMonth = 30;
+    break;
+    case 7: maxDaysInMonth = 31;
+    break;
+    case 8: maxDaysInMonth = 31;
+    break;
+    case 9: maxDaysInMonth = 30;
+    break;
+    case 10: maxDaysInMonth = 31;
+    break;
+    case 11: maxDaysInMonth = 30;
+    break;
+    case 12: maxDaysInMonth = 31;
+    break;
+    default: maxDaysInMonth = false;
+}
+
+if (maxDaysInMonth) {
+    if (dayToBeChecked <= maxDaysInMonth && dayToBeChecked > 0) {
+        isCorrectDay = true;
+    }
+}
+
+let isCorrectDate = isCorrectDay && isCorrectMonth && isCorrectYear;
+
+alert(`The date dd/mm/yyyy ${dayToBeChecked}/${monthToBeChecked}/${yearToBeChecked} is ${isCorrectDate ? 'correct' : 'incorrect'}`);
+
+
+// Задача 6. Линейное уравнение
+
+// Линейным называют уравнение вида ax+b=0, где a и b - числовые коэффициенты,
+// например 2x+4=0. Написать программу, решающую такое уравнение.
+// Пользователь вводит значение коэффициентов a и b,
+// выводит решение, учесть ситуации a=0 и b=0.
+
+
+
+
+// Задача 7. Квадратное уравнение
+
+// Квадратным называют уравнение вида ax^2+bx+c=0, где a,b,c - числовые коэффициенты. Решение данного уравнения можно найти по формуле дискриминанта (http://edu.glavsprav.ru/info/diskriminant/). Написать программу, 
+// которая решает квадратные уравнения по введенным пользователем коэффициентам.
