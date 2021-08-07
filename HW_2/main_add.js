@@ -83,5 +83,5 @@ if (isEnoughFuelInTankAC && isTripPossibleCB) {
     alert(`Полет возможен без дозаправки в пункте С.`);
   }
 } else {
-  alert(`Полет не возможен`);
+  alert(`Полет не возможен.`);
 }
