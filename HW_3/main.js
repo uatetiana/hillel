@@ -59,4 +59,43 @@ console.log(pow(16, 0.25));
 
 // 3) Написать функцию для нахождения наименьшего общего кратного
 
+function NOK(a, b) {
+  return (a * b) / NOD(a, b);
+}
+
+NOK(15, 25);
+console.log(NOK(15, 25));
+
+function NOD(a, b) {
+  let num1 = a;
+  let num2 = b;
+
+  while (num1 > 0 && num2 > 0) {
+    if (num1 > num2) {
+      num1 = num1 % num2;
+    } else {
+      num2 = num2 % num1;
+    }
+  }
+  return num1 + num2;
+}
+
+NOD(15, 25);
+console.log(NOD(15, 25));
+
 // 4*) Написать функцию для вывода числа "задом на перед"
+
+function reverse(num) {
+  let tmp = num;
+  let integer;
+  let sum = "";
+  while (tmp > 0) {
+    integer = tmp % 10;
+    tmp = parseInt(tmp / 10);
+    sum += integer;
+  }
+  return sum;
+}
+
+reverse(1234);
+console.log(reverse(1234));
