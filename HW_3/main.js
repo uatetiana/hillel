@@ -34,7 +34,7 @@ function pow(base, exponent) {
     let coefficient = exponent < 0 ? -1 : 1;
     let iterations = (1 / exponent) * coefficient;
     let num = base / 2;
-    
+
     for (let i = 0; i < iterations; i++) {
       result = base / num;
     }
@@ -54,7 +54,7 @@ function isInteger(num) {
   return (num ^ 0) === num;
 }
 
-pow(-1.5, -10);
+pow(16, 0.25);
 console.log(pow(16, 0.25));
 
 // 3) Написать функцию для нахождения наименьшего общего кратного
