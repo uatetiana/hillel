@@ -65,17 +65,11 @@ if (cargoWeight >= CARGO_WEIGHT_4T && cargoWeight < CARGO_WEIGHT_5T) {
   fuelConsumption = FUEL_CONSUMPTION_CARGO_MAX_5T;
 }
 
-console.log(cargoWeight);
-console.log(fuelConsumption);
 const fuelNeededAC = (distanceAC / 100) * fuelConsumption;
-console.log(fuelNeededAC);
 const fuelRemainingAC = initialFuelQtyInTank - fuelNeededAC;
 const isEnoughFuelInTankAC = fuelRemainingAC >= 0 ? true : false;
-console.log(isEnoughFuelInTankAC);
-console.log(fuelRemainingAC);
 
 const fuelNeededCB = (distanceCB / 100) * fuelConsumption;
-console.log(fuelNeededCB);
 const isTripPossibleCB = fuelNeededCB <= fuelTankVolume;
 let fuelToBeChargedCB;
 const needToChargeAdd = fuelNeededCB > fuelRemainingAC;
