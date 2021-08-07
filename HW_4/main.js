@@ -1,5 +1,20 @@
 // 1) функция принимает массив и возвращает сумму всех его элементов
 
+let arr1 = [1, 3, 7, 100, -100, 22];
+
+function arrSum(arr) {
+    const arrLength = arr.length;
+    let sum = 0;
+
+    for (let i = 0; i < arrLength; i++) {
+        sum += arr[i];
+    }
+
+    return sum;
+}
+
+arrSum(arr1);
+console.log(arrSum(arr1));
 // 2) функция принимает массив и искомое значение
 // и возврат его индекс в массиве, если значение найдено, если нет - то -1
 
