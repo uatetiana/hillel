@@ -56,11 +56,6 @@ switch (cargoWeight) {
     default: fuelConsuption = false;
 }
 
-// const totalDistance = distanceAC + distanceCB;
-// const fuelQtyToBeUsed = cargoWeight * fuelConsuption * totalDistance;
-// const fuelQtyToBeCharged = totalFuelToBeUsed - initialFuelQtyInTank;
-
-
 const fuelConsuptionAC = distanceAC * cargoWeight * fuelConsuption;
 const fuelRemainingAC = initialFuelQtyInTank - fuelConsuptionAC;
 const isEnoughFuelInTankAC = fuelRemainingAC >= 0 ? true : false;
