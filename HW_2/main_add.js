@@ -23,11 +23,11 @@ const FUEL_CONSUMPTION_CARGO_MAX_3T = 35; // per 100km
 const FUEL_CONSUMPTION_CARGO_MAX_4T = 42; // per 100km
 const FUEL_CONSUMPTION_CARGO_MAX_5T = 50; // per 100km
 
-const cargoWeight = parseFloat('Введите вес груза, кг: ');
-const fuelTankVolume = parseFloat('Введите объем топливного бака в литрах: ');
-const distanceAC = parseFloat('Введите расстояние из пункта А в пункт С, км: ');
-const distanceCB = parseFloat('Введите расстояние из пункта С в пункт B, км: ');
-const initialFuelQtyInTank = parseFloat('Введите исходное количество топлива в баке, л: ');
+const cargoWeight = parseFloat(prompt('Введите вес груза, кг: ') / 1000);
+const fuelTankVolume = parseFloat(prompt('Введите объем топливного бака в литрах: '));
+const distanceAC = parseFloat(prompt('Введите расстояние из пункта А в пункт С, км: '));
+const distanceCB = parseFloat(prompt('Введите расстояние из пункта С в пункт B, км: '));
+const initialFuelQtyInTank = parseFloat(prompt('Введите исходное количество топлива в баке, л: '));
 
 let fuelConsuption; // per 100km
 
@@ -56,11 +56,11 @@ switch (cargoWeight) {
     default: fuelConsuption = false;
 }
 
-const fuelConsuptionAC = distanceAC * cargoWeight * fuelConsuption;
-const fuelRemainingAC = initialFuelQtyInTank - fuelConsuptionAC;
+const fuelNeededAC = distanceAC / 100 * fuelConsuption;
+const fuelRemainingAC = initialFuelQtyInTank - fuelNeededAC;
 const isEnoughFuelInTankAC = fuelRemainingAC >= 0 ? true : false;
 
-const fuelConsuptionCB = distanceCB * cargoWeight * fuelConsuption;
+const fuelConsuptionCB = distanceCB / 100 * fuelConsuption;
 const isTripPossibleCB = fuelConsuptionCB <= fuelTankVolume;
 let fuelToBeChargedCB;
 const needToChargeAdd = fuelConsuptionCB > fuelRemainingAC;
