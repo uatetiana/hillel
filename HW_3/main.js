@@ -34,6 +34,7 @@ function pow(base, exponent) {
     let coefficient = exponent < 0 ? -1 : 1;
     let iterations = (1 / exponent) * coefficient;
     let num = base / 2;
+    
     for (let i = 0; i < iterations; i++) {
       result = base / num;
     }
@@ -46,7 +47,6 @@ function pow(base, exponent) {
   } else {
     return "Операция невозможна. Вы попытались возвести отрицательное число в нецелую степень";
   }
-
   return result;
 }
 
